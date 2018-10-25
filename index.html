@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belgraded - your Belgrade guide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body onload="startTime()">
+
+		<!-- NAVIGATION -->
+
+		<nav>
+			<div class="container">
+				<div class="wrapper navi">
+					<div>
+						<span class="logo">belgrade<span class="logoLetter">d</span></span>
+					</div>
+					<div class="menu">
+						<a href="#exchange">exchange</a>
+						<a href="#shuttle">shuttle bus</a>
+						<a href="#transport">transport</a>
+						<a href="#food">food</a>				
+					</div>
+					<div id="menu-mobile" onclick="showMenu()">
+						<img src="img/menu.png"/>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="submenu">
+			<div class="container">
+				<div class="wrapper">
+					<span class="shuttle-bar">Shuttle bus A1 leaves<br class="show-mobile"> Belgrade airport <span id="arrive"></span> / Slavia square <span id="leave"></span></span>
+					<div>
+						<span>Currency: </span>
+						<select id="currencyDropdown">
+							<option value="1">Serbian dinar</option>
+							<option value="118.3046">Euro</option>
+							<option value="102.3839">US dollar</option>
+							<option value="103.7032">Swiss franc</option>
+							<option value="1.5304">Russian rouble</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MAIN CONTENT -->
+
+		<main>
+
+			<div id="liveBackground">
+				<iframe src="https://www.youtube.com/embed/3HZ-IhxJhQY?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+
+			<div class="container">
+
+				<!-- ARTICLE 1 -->
+				
+				<article id="exchange">
+					<h2>Exchange foreign currency in Belgrade</h2>
+					<p>We are not a part of European Union, our currency is Serbian dinar (short “RSD”).</p>
+
+					<p class="highlighted">If you try to pay a product or service in foreign currency, some people may accept Euro, US dollar or Swiss franc, but exchange rate will probably not be in your favour.</p>
+
+					<p>Foreign currencies that are usually accepted by exchange offices are Euro, American dollar and Swiss franc. If you use other currencies, don’t be confused if you get rejected. You will have to try to do the exchange in a bank.</p>
+
+					<p>Taxi will cost you about <span class="convert">2000.00</span><span class="currency">RSD</span> to get from the airport to the city. Ticket for A1 shuttle bus is <span class="convert">300.00</span><span class="currency">RSD</span>. There are a lot exchange offices in the city, and their exchange rate is not bad.</p>
+
+					<p>Serbian Post Office offers good exchange rate. Downside: sometimes it gets crowded so you will have to wait in line. You can see location of post offices <a href="https://www.google.rs/search?q=posta+srbije&npsic=0&rflfq=1&rlha=0&rllag=44804372,20458702,427&tbm=lcl&ved=2ahUKEwjBpJf7iP7dAhXMkSwKHROTD6oQtgN6BAgBEAQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!3m8!1m3!1d23411.540420526177!2d20.45946522491454!3d44.80904528951737!3m2!1i1260!2i794!4f13.1">here</a>. You can see their current exchange rate <a href="http://www.posta.rs/struktura/eng/novcano/menjacnica.asp">here</a>.</p>
+				</article>
+
+				<!-- ARTICLE 2 -->
+				
+				<article id="shuttle">
+					<h2>A1 bus line (Belgrade airport to Slavia square)</h2>
+					<p>Driver will sell you the ticket - price is <span class="convert">300.00</span><span class="currency">RSD</span>. From 7.20AM to 18:40PM frequency of this line is 20 minutes. However, between 19.00 and 06.00 bus line is less frequent, so you may want to use a taxi. It takes 45 to 60 minutes to get from airport to downtown by bus.</p>
+
+					<a href="https://www.busevi.com/mapa-linije-a1-trg-slavija-kralja-milutina-aerodrom-nikola-tesla/">Map of A1 bus line</a>
+
+					<p class="highlighted">A1 shuttle bus has the same timetable for every day of the week.</p>
+					<p>Use timetable by combining hour and minutes column. As an example in direction from AIRPORT to SLAVIA square, you have one departure for HOUR 19, it's 19.30. From SLAVIA to AIRPORT, you have two departures for HOUR 19, it's 19.00 and 19.20.</p>
+
+					<table id="schedule">
+						<tr><th></th><th>from AIRPORT<br>to SLAVIA</th><th>from SLAVIA<br>to AIRPORT</th></tr>
+						<tr><td>HOUR</td><td>MINUTES</td><td>MINUTES</td></tr>
+						<tr><td>0</td><td>00</td><td>00</td></tr>
+						<tr><td>1</td><td>00</td><td>30</td></tr>
+						<tr><td>2</td><td>00</td><td>-</td></tr>
+						<tr><td>3</td><td>-</td><td>20</td></tr>
+						<tr><td>4</td><td>-</td><td>20</td></tr>
+						<tr><td>5</td><td>00</td><td>20</td></tr>
+						<tr><td>6</td><td>00</td><td>20  40</td></tr>
+						<tr><td>7</td><td>20  40</td><td>00  20  40</td></tr>
+						<tr><td>8</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>9</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>10</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>11</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>12</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>13</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>14</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>15</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>16</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>17</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>18</td><td>00  20  40</td><td>00  20  40</td></tr>
+						<tr><td>19</td><td>30</td><td>00  20</td></tr>
+						<tr><td>20</td><td>30</td><td>30</td></tr>
+						<tr><td>21</td><td>-</td><td>30</td></tr>
+						<tr><td>22</td><td>00</td><td>-</td></tr>
+						<tr><td>23</td><td>00</td><td>00</td></tr>
+					</table>
+				</article>
+				
+				<!-- ARTICLE 3 -->
+
+				<article id="transport">
+					<h2>Public transport in Belgrade</h2>
+
+					<p>We have buses, trams and trolleybuses. Tickets are valid for all three types of vehicles.</p>
+
+					<p>Belgrade public transport is divided in 4 zones. You'll probably need just Zone 1 and Zone 2. If you decide to visit <i>Avala</i> hill it's in Zone 2, so you are covered. You can see detailed map of Zones <a href="https://www.busplus.rs/busplus_zoniranje/prikaz_zona.php">here</a>. Zone 1 is shown in red, Zone 2 in yellow, Zone 3 in green, Zone 4 in blue.</p>
+
+					<p class="highlighted">If you ride without a ticket, fine is <span class="convert">2000.00</span><span class="currency">RSD</span> if you have the money to pay immediately, and <span class="convert">6000.00</span><span class="currency">RSD</span> if you don't. In that case, fine will be sent to your address by mail.</p>
+
+					<p>Local public transportation system is called <i>Busplus</i>. You buy a ticket at a kiosk located near bus stops in town center. Recommended option is whole day ticket:</p>
+
+					<div class="tickets">
+						<div class="single-ticket">
+							<p><b>1 day ticket</b></p>
+							<p>Price: <span class="convert">250.00</span><span class="currency">RSD</span></p>
+							<p>Zone 1 & 2</p>
+						</div>
+						<div class="single-ticket">
+							<p><b>3 day ticket</b></p>
+							<p>Price: <span class="convert">700.00</span><span class="currency">RSD</span></p>
+							<p>Zone 1 & 2</p>
+						</div>
+						<div class="single-ticket">
+							<p><b>5 day ticket</b></p>
+							<p>Price: <span class="convert">1000.00</span><span class="currency">RSD</span></p>
+							<p>Zone 1 & 2</p>
+						</div>
+					</div>
+
+					<p class="highlighted">These tickets are NOT valid from 00.00AM to 04.00AM. If you decide to ride between 00.00AM and 04.00AM you'll have to buy a single ticket from the driver, price is <span class="convert">150.00</span><span class="currency">RSD</span> for Zone 1 and <span class="convert">210.00</span><span class="currency">RSD</span> for Zone 2. Friendly suggestion, use a taxi between 00.00 and 04.00AM, buses are very rare this late.</p>
+
+					<p>You can also buy a ticket that you can add credit to. This ticket costs <span class="convert">250.00</span><span class="currency">RSD</span> initially, and then you add credit to it. When you validate your card in the vehicle, ride costs <span class="convert">89.00</span><span class="currency">RSD</span>, and you can change vehicles and direction of travel during a 90 minute period.</p>
+
+					<p>Lastly, you can buy ticket from the driver and it costs <span class="convert">150.00</span><span class="currency">RSD</span>. You need to prepare exact amount of cash, and it is time consuming. I highly suggest not to buy ticket this way.</p>
+
+				</article>
+
+				<!-- ARTICLE 4 -->
+
+				<article id="food">
+					<h2>Hungry in Belgrade</h2>
+					<p>I'm into food. When I'm abroad, I try to get suggestions from locals. Typical Belgrade tourist guide will tell you to go to <i>Skadarlija</i> and try few <i>kafanas</i>, and that's OK, but this is not it. This is a hint from a local guy that likes to take a break with friends and enjoy good food. These are the places that I go to with people that I care the most.</p>
+
+					<div class="restaurants">
+						<div class="restaurant">
+							<a href="https://www.google.com/maps/place/%D0%82%D0%B5%D1%80%D0%B4%D0%B0%D0%BD/@44.7863582,20.5039331,17z/data=!3m1!4b1!4m5!3m4!1s0x475a709075123b95:0xab8006f04169d502!8m2!3d44.7863544!4d20.5061218">
+								<img src="img/djerdan.jpg" alt="kafana djerdan" style="width:100%;">
+								<div class="bottom-left">"Đerdan"</div>
+							</a>
+						</div>
+						<div class="restaurant">
+							<a href="https://www.google.com/maps/place/Lovac/@44.8031298,20.4674693,17z/data=!3m1!4b1!4m5!3m4!1s0x475a7aa09cdb94d7:0x88f7a6f74f704078!8m2!3d44.803126!4d20.469658">
+								<img src="img/lovac.jpg" alt="kafana lovac" style="width:100%;">
+								<div class="bottom-left">"Lovac"</div>
+							</a>
+						</div>
+						<div class="restaurant">
+							<a href="https://www.google.com/maps/place/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9C%D0%B0%D0%BB%D0%BE+%D0%BA%D0%BE%D1%80%D0%B7%D0%BE/@44.7877404,20.5146128,17z/data=!4m5!3m4!1s0x475a7098ef43f7a7:0x50a5c9bcac5262d7!8m2!3d44.7877366!4d20.5168015">
+								<img src="img/malo_korzo.jpg" alt="kafana malo korzo" style="width:100%;">
+								<div class="bottom-left">"Malo korzo"</div>
+							</a>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</main>
+
+		<!-- FOOTER -->
+
+		<footer>
+			<div class="container">
+				<div>Do you have a <a href="mailto:nikstojanovic84@gmail.com"><span class="orangeText">suggestion</span></a>?</div>
+			</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
