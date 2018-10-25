@@ -71,13 +71,11 @@ function calcNextDeparture(location, currentTime) {
     return departure;
 }
 
-// toggle menu for mobile
-document.getElementById("menu-mobile").addEventListener("click", function () {
-	let navBar = document.getElementsByTagName("nav")[0];
+// position navbar bottom for mobile devices
+let windowWidth = window.innerWidth;
 
-	if (navBar.style.display === "block") {
-		navBar.style.display = "none";
-	} else {
-		navBar.style.display = "block";
-	}
-});
+if (windowWidth > 600) {
+    navigation.style.top = "1.8rem";
+} else {
+    navigation.style.bottom = "0";
+}

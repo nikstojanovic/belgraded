@@ -9,11 +9,11 @@
 
 		<!-- NAVIGATION -->
 
-		<nav>
+		<nav id="navigation">
 			<div class="container">
 				<div class="wrapper navi">
-					<div>
-						<span class="logo">belgrade<span class="logoLetter">d</span></span>
+					<div class="logo">
+						<span>belgrade<span class="logoLetter">d</span></span>
 					</div>
 					<div class="menu">
 						<a href="#exchange">exchange</a>
@@ -21,17 +21,17 @@
 						<a href="#transport">transport</a>
 						<a href="#food">food</a>				
 					</div>
-					<div id="menu-mobile" onclick="showMenu()">
-						<img src="img/menu.png"/>
+					<div id="menu-mobile">
+						<a href="#subMenu">top</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 
-		<div class="submenu">
+		<div id="subMenu">
 			<div class="container">
 				<div class="wrapper">
-					<span class="shuttle-bar">Shuttle bus A1 leaves<br class="show-mobile"> Belgrade airport <span id="arrive"></span> / Slavia square <span id="leave"></span></span>
+					<span class="shuttle-bar">Shuttle bus A1 leaves Belgrade <br class="show-mobile">Airport <span id="arrive"></span> / Slavia square <span id="leave"></span></span>
 					<div>
 						<span>Currency: </span>
 						<select id="currencyDropdown">
