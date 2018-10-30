@@ -12,8 +12,14 @@ for (let i = 0; i < articles.length; i++) {
 navbarPosition();
 
 window.onload = function() {
+    // set time to next shuttle bus departure
+    startTime();
+
     // on window resize, position navbar
     window.addEventListener("resize", navbarPosition);
+
+    // if currency is changed in dropdown, do the conversion
+    document.getElementById("currencyDropdown").addEventListener("change", currencyConversion);
 };
 
 // position navbar bottom for mobile devices
@@ -30,7 +36,7 @@ function navbarPosition() {
 }
 
 // if currency is changed in dropdown, do the conversion
-document.getElementById("currencyDropdown").addEventListener("change", function() {
+function currencyConversion() {
     let pricesToConvert = document.getElementsByClassName("convert");
     let currencyShort = document.getElementsByClassName("currency");
     let currencyDropdown = document.getElementById("currencyDropdown");
@@ -54,7 +60,7 @@ document.getElementById("currencyDropdown").addEventListener("change", function(
         pricesToConvert[i].innerHTML = (priceValues[i] / document.getElementById("currencyDropdown").value).toFixed(2);
         currencyShort[i].innerHTML = currencies[indexOfOption];
     }
-});
+}
 
 // update shuttle bus time
 function startTime() {
@@ -68,9 +74,10 @@ function startTime() {
 
     document.getElementById('arrive').innerHTML = calcNextDeparture(airportDepartures, currentTime);
     document.getElementById('leave').innerHTML = calcNextDeparture(slaviaDepartures, currentTime);
-    var t = setTimeout(startTime, 5000);
+    let t = setTimeout(startTime, 5000);
 }
 
+// calculate time to next shuttle bus departure
 function calcNextDeparture(location, currentTime) {
     let departure;
 
