@@ -1,11 +1,32 @@
 let priceValues = [];
-
-// if article height is less than viewport height, raise height of article
-// for better UX this code is written here instead in window.onload
 let articles = document.getElementsByTagName("article");
 
+// if article height is less than viewport height, raise height of article
+// for better UX this code is written here instead in a function called in window.onload
 for (let i = 0; i < articles.length; i++) {
     articles[i].style.minHeight = window.innerHeight + "px";
+}
+
+// position navbar according to screen resolution
+// for better UX this code is written here instead in a function called in window.onload
+navbarPosition();
+
+window.onload = function() {
+    // on window resize, position navbar
+    window.addEventListener("resize", navbarPosition);
+};
+
+// position navbar bottom for mobile devices
+function navbarPosition() {
+    let windowWidth = window.innerWidth;
+
+    if (windowWidth > 600) {
+        navigation.style.removeProperty("bottom");
+        navigation.style.top = "1.8rem";
+    } else {
+        navigation.style.removeProperty("top");
+        navigation.style.bottom = "0";
+    }
 }
 
 // if currency is changed in dropdown, do the conversion
@@ -69,13 +90,4 @@ function calcNextDeparture(location, currentTime) {
         }
     }
     return departure;
-}
-
-// position navbar bottom for mobile devices
-let windowWidth = window.innerWidth;
-
-if (windowWidth > 600) {
-    navigation.style.top = "1.8rem";
-} else {
-    navigation.style.bottom = "0";
 }
