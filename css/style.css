@@ -178,18 +178,29 @@ nav a {
 /* LIVE CAM BACKGROUND */
 
 #liveBackground {
-	opacity: .1;
+	/* opacity: .1;
 	position: fixed;
 	top: -25%;
 	left: -25%;
 	z-index: -99;
 	width: 100%;
-	height: 100%;
+	height: 100%; */
+	background-image: url("../img/pozadina.jpg");
+	height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: .2;
 }
-iframe {
+/* iframe {
 	height: 150%;
 	width: 150%;
-}
+} */
 
 @media only screen and (max-width: 600px) {
 	#liveBackground {

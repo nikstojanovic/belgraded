@@ -4,7 +4,7 @@ let articles = document.getElementsByTagName("article");
 // if article height is less than viewport height, raise height of article
 // for better UX this code is written here instead in a function called in window.onload
 for (let i = 0; i < articles.length; i++) {
-    articles[i].style.minHeight = window.innerHeight + "px";
+    articles[i].style.minHeight = "100vh";
 }
 
 // position navbar according to screen resolution
